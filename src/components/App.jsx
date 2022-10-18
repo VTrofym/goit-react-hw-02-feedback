@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Counter from './Counter/Counter';
 import Dropdown from './Dropdown/Dropdown';
 import ColorPicker from './ColorPicker/ColorPicker';
@@ -14,15 +14,22 @@ const colorPickerOptions = [
 ];
 
 class App extends Component {
-  state = {}
+  state = {
+    todos: [
+      { id: 'id-1', text: 'Выучить основы React', completed: false },
+      { id: 'id-2', text: 'Разобраться с React Router', completed: false },
+      { id: 'id-3', text: 'Пережить Redux', completed: false },
+    ],
+  };
   render() {
+    const { todos } = this.state;
     return (
-<>
-      <Counter initialValue={10} />
-      <Dropdown />
+      <>
+        <Counter initialValue={10} />
+        <Dropdown />
         <ColorPicker options={colorPickerOptions} />
-        <TodoList />
-        </>
+        <TodoList todos={todos} />
+      </>
     );
   }
 }
