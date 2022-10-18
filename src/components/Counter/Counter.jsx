@@ -2,13 +2,13 @@ import React from "react";
 import Controls from "./Controls/Controls";
 
 class Counter extends React.Component {
-  static defuultProps = {
-    initialValue: 0,
-  };
+  // static defuultProps = {
+  //   initialValue: 0,
+  // };
 
-  static propTypes = {
+  // static propTypes = {
 
-  }
+  // }
   
   // state обязательное название
   state = {
@@ -39,13 +39,13 @@ class Counter extends React.Component {
           onIncrement={this.handleIncrement}
           onDecrement={this.handleDecrement}
         />
+        <h2>Statistics</h2>
       </div>
     );
   }
 };
 
 export default Counter;
-
 
 // handleIncrement = event => {
 //     console.log('клик в увеличить')

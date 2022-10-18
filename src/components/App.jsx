@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 
 import Counter from './Counter/Counter';
-import Dropdown from './Dropdown/Dropdown';
+// import Dropdown from './Dropdown/Dropdown';
 // import ColorPicker from './ColorPicker/ColorPicker';
-import TodoList from './TodoList/TodoList';
+// import TodoList from './TodoList/TodoList';
+import Feedbacks from './Feedbacks/Feedbacks';
 
 // import colorPicker from './dataJson/colorPicker.json'
 import initialTodos from './dataJson/todos.json';
@@ -32,14 +33,16 @@ class App extends Component {
 
     return (
       <>
+        <h1>Please Leave feedback</h1>
         <Counter initialValue={10} />
-        <Dropdown />
+        {/* <Dropdown /> */}
         {/* <ColorPicker options={colorPickerOptions} /> */}
         <div>
           <span>Общее количество: {totalTodoCount}</span>
           <span>Количество выполненных: { completedTodoCount}</span>
         </div>
-        <TodoList todos={todos} onDeleteTodo={this.deleteTodo} />
+        {/* <TodoList todos={todos} onDeleteTodo={this.deleteTodo} /> */}
+        <Feedbacks/>
       </>
     );
   }
