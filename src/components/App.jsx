@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 
 import Counter from './Counter/Counter';
 import Dropdown from './Dropdown/Dropdown';
-import ColorPicker from './ColorPicker/ColorPicker';
+// import ColorPicker from './ColorPicker/ColorPicker';
 import TodoList from './TodoList/TodoList';
 
-import colorPicker from './dataJson/colorPicker.json'
+// import colorPicker from './dataJson/colorPicker.json'
 import initialTodos from './dataJson/todos.json';
 
-const colorPickerOptions = colorPicker;
+// const colorPickerOptions = colorPicker;
 
 class App extends Component {
   state = {
@@ -34,7 +34,7 @@ class App extends Component {
       <>
         <Counter initialValue={10} />
         <Dropdown />
-        <ColorPicker options={colorPickerOptions} />
+        {/* <ColorPicker options={colorPickerOptions} /> */}
         <div>
           <span>Общее количество: {totalTodoCount}</span>
           <span>Количество выполненных: { completedTodoCount}</span>
