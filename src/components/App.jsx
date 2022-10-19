@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Counter from './Counter/Counter';
+import Marcup from './Marcup/Marcup';
 
 
 class App extends Component {
@@ -14,7 +14,7 @@ class App extends Component {
     return (
       <>
         
-        <Counter initialValue={0} />
+        <Marcup initialValue={0} />
         
       </>
     );

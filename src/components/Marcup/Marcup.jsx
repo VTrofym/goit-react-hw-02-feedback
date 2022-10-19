@@ -1,7 +1,7 @@
 import React from "react";
 import Buttons from "./Buttons/Buttons";
 
-class Counter extends React.Component {
+class Marcup extends React.Component {
 
   state = {
       value: this.props.initialValue,
@@ -44,4 +44,4 @@ class Counter extends React.Component {
   }
 };
 
-export default Counter;
+export default Marcup;
