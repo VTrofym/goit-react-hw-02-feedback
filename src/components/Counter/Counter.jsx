@@ -1,16 +1,8 @@
 import React from "react";
-import Controls from "./Controls/Controls";
+import Buttons from "./Buttons/Buttons";
 
 class Counter extends React.Component {
-  // static defuultProps = {
-  //   initialValue: 0,
-  // };
 
-  // static propTypes = {
-
-  // }
-  
-  // state обязательное название
   state = {
       value: this.props.initialValue,
     };
@@ -33,26 +25,23 @@ class Counter extends React.Component {
 
   render() {
     return (
-      <div className="Counter">
-        <span className="Counter__value">{this.state.value}</span>
-        <Controls
-          onIncrement={this.handleIncrement}
-          onDecrement={this.handleDecrement}
+      <div>
+        <h1>Please Leave feedback</h1>
+        <span>{this.state.value}</span>
+        <Buttons
+          addGoodRewiews={this.handleIncrement}
+          addBadReviews={this.handleDecrement}
+          addNeutralReviews={this.handleDecrement}
         />
         <h2>Statistics</h2>
+        <div>
+          <span>Good: {this.state.value}</span>
+          <span>Neutral: {this.state.value}</span>
+          <span>Bad: {this.state.value}</span>
+        </div>
       </div>
     );
   }
 };
 
 export default Counter;
-
-// handleIncrement = event => {
-//     console.log('клик в увеличить')
-
-//     const target = event.target; // нужна локальная переменная если асинхрон
-
-//     setTimeout(() => {
-//       console.log(target)
-//     }, 1000)
-//   };
