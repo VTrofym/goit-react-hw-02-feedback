@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
 import Statistics from '../Statistics/Statistics';
 
 export class Feedback extends Component {
@@ -33,7 +34,12 @@ export class Feedback extends Component {
     return (
       <>
         <h2>Please leave feadback</h2>
-        <div>
+        <FeedbackOptions
+          setGood={this.setGood}
+          setNeutral={this.setNeutral}
+          setBad={this.setBad}
+        />
+        {/* <div>
           <button onClick={this.setGood} type="button">
             Good
           </button>
@@ -43,7 +49,7 @@ export class Feedback extends Component {
           <button onClick={this.setBad} type="button">
             Bad
           </button>
-        </div>
+        </div> */}
         <Statistics
           good={this.state.good}
           neutral={this.state.neutral}
