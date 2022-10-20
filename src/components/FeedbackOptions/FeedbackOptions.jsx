@@ -1,26 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const FeedbackOptions = ({setGood, setNeutral, setBad}) => {
+const FeedbackOptions = ({allFeedback, feedback}) => {
   return (
-    <div>
-      <button onClick={setGood} type="button">
-        Good
-      </button>
-      <button onClick={setNeutral} type="button">
-        Neutral
-      </button>
-      <button onClick={setBad} type="button">
-        Bad
-      </button>
-    </div>
+    feedback.map(item => (
+      <button type='buttton' key={item} onClick={() => allFeedback(item)}>{item}</button>
+    ))
   );
 };
 
 FeedbackOptions.propTypes = {
-  setGood: PropTypes.func.isRequired,
-  setNeutral: PropTypes.func.isRequired,
-  setBad: PropTypes.func.isRequired,
+  feedback: PropTypes.array.isRequired,
+  allFeedback: PropTypes.func.isRequired,
 }
 
 export default FeedbackOptions;
