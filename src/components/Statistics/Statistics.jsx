@@ -10,11 +10,11 @@ const Statistics = ({
 }) => {
   return (
     <div>
-      <p>Good: {good}</p>
-      <p>Neutral: {neutral}</p>
-      <p>Bad: {bad}</p>
-      <p> Total: {countTotalFeedback()}</p>
-      <p style={{ color: 'red' }}>
+      <p style={{ color: 'green' }} >Good: {good}</p>
+      <p style={{ color: 'orange' }} >Neutral: {neutral}</p>
+      <p style={{ color: 'red' }} >Bad: {bad}</p>
+      <p style={{ color: 'blue' }} > Total: {countTotalFeedback()}</p>
+      <p style={{ color: 'blueviolet' }}>
         Positive feedback:
         {countPositiveFeedbackPercentage() || 0}%
       </p>
