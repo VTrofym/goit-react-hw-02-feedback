@@ -1,24 +1,9 @@
-import React, { Component } from 'react';
-import Marcup from './Marcup/Marcup';
+import { Feedback } from './Feedback';
 
-
-class App extends Component {
-  state = {
-    good: 0,
-    neutral: 0,
-    bad: 0
-  };
-
-  render() {
-    
-    return (
-      <>
-        
-        <Marcup initialValue={0} />
-        
-      </>
-    );
-  }
-}
-
-export default App;
+export const App = () => {
+  return (
+    <div>
+      <Feedback />
+    </div>
+  );
+};
