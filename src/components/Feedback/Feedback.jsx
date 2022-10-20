@@ -1,4 +1,5 @@
 import { Component } from 'react';
+
 export class Feedback extends Component {
   state = {
     good: 0,
@@ -47,7 +48,7 @@ export class Feedback extends Component {
           <p>Neutral: {this.state.neutral}</p>
           <p>Bad: {this.state.bad}</p>
           <p> Total: {this.countTotalFeedback()}</p>
-          <p>
+          <p style={{color: "red"}}>
             Positive feedback:
             {this.countPositiveFeedbackPercentage() || 0}%
           </p>
