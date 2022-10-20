@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import FeedbackOptions from '../FeedbackOptions/FeedbackOptions';
+import { Section } from '../Section/Section';
 import Statistics from '../Statistics/Statistics';
 
 export class Feedback extends Component {
@@ -33,30 +34,24 @@ export class Feedback extends Component {
   render() {
     return (
       <>
-        <h2>Please leave feadback</h2>
-        <FeedbackOptions
-          setGood={this.setGood}
-          setNeutral={this.setNeutral}
-          setBad={this.setBad}
-        />
-        {/* <div>
-          <button onClick={this.setGood} type="button">
-            Good
-          </button>
-          <button onClick={this.setNeutral} type="button">
-            Neutral
-          </button>
-          <button onClick={this.setBad} type="button">
-            Bad
-          </button>
-        </div> */}
-        <Statistics
-          good={this.state.good}
-          neutral={this.state.neutral}
-          bad={this.state.bad}
-          countTotalFeedback={this.countTotalFeedback}
-          countPositiveFeedbackPercentage={this.countPositiveFeedbackPercentage}
-        />
+        <Section title={'Please leave feedback'} >
+          <FeedbackOptions
+            setGood={this.setGood}
+            setNeutral={this.setNeutral}
+            setBad={this.setBad}
+          />
+        </Section>
+        <Section  title={'Statistics'} >
+          <Statistics
+            good={this.state.good}
+            neutral={this.state.neutral}
+            bad={this.state.bad}
+            countTotalFeedback={this.countTotalFeedback}
+            countPositiveFeedbackPercentage={
+              this.countPositiveFeedbackPercentage
+            }
+          />
+        </Section>
       </>
     );
   }
